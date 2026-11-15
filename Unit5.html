@@ -1,4 +1,9 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>にゃんたん Oxford</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +28,7 @@
   --accent:#6FA2FF; --accent-ink:#0F1628; --coin:#F7C232; --coin-ink:#2E2100;
   --good:#46CB8E; --good-bg:#14352A; --bad:#FF6C62; --bad-bg:#3D1C1C; --hint:#F0B451; color-scheme:dark}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{background:var(--bg)}
 body{color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
@@ -65,6 +71,38 @@ h2{font-family:var(--f-display);font-weight:400;font-size:20px;margin:0;text-wra
 .unit .no{font-family:var(--f-display);font-size:17px}
 .unit .t{font-family:var(--f-en);font-size:13px;color:var(--muted);line-height:1.3}
 .unit .s{font-size:12px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.modes{grid-template-columns:repeat(5,1fr)!important}.modes .mode{font-size:13px;padding:8px 0}
+.tabs4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.tabs4 .mode{font-size:13px;line-height:1.3;padding:6px 2px}
+.rtag{align-self:flex-start;font-size:12px;font-weight:700;color:var(--accent);background:var(--sunk);border-radius:999px;padding:2px 10px}
+.jabig.sm{font-size:18px}.jabig.en{font-family:var(--f-en);font-weight:700}
+.choices.one{grid-template-columns:1fr}.choices.one .choice{text-align:left;font-size:17px;min-height:0;padding:12px 14px}
+.tiles{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.tile{font-family:var(--f-en);font-weight:700;font-size:18px;background:var(--surface);border:2px solid var(--line);border-bottom-width:4px;border-radius:10px;padding:6px 12px}
+.tile:disabled{opacity:.25;cursor:default}.tile.on{border-color:var(--accent);color:var(--accent);background:var(--sunk)}
+.slots{min-height:52px;border:2px dashed var(--line);border-radius:12px;padding:8px 10px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:var(--f-en);font-size:19px;font-weight:700}
+.slots .ph{color:var(--muted);font-family:var(--f-body);font-size:14px;font-weight:500}
+.slots .arr{color:var(--muted);font-size:14px}
+.simprev{font-family:var(--f-en);font-size:22px;font-weight:700;text-align:center;line-height:1.6}
+.simprev u{color:var(--accent);text-decoration:none;border-bottom:3px solid var(--accent);padding:0 4px;display:inline-block;min-width:3ch}
+.intro{display:flex;flex-direction:column;gap:12px}
+.ihead{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center}.ihead svg{width:64px;height:64px;border-radius:12px;display:block}
+.exs{display:flex;flex-direction:column;gap:6px}
+.exr{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;background:var(--sunk);border-radius:10px;padding:8px 12px;min-width:0}
+.exr b{font-family:var(--f-en);font-size:18px;word-break:break-word}.exr .arr{color:var(--muted)}
+.ask{font-family:var(--f-display);font-size:18px;margin:0;text-align:center}
+.tip{background:var(--coin);color:var(--coin-ink);border-radius:12px;padding:10px 12px;font-weight:700;line-height:1.55}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--sunk);border:2px solid transparent;border-radius:999px;padding:4px 12px;font-weight:700;font-size:13px}
+.chip[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.mktext{width:100%;border:2px solid var(--line);border-radius:12px;padding:10px;font-size:17px;background:var(--surface);color:var(--ink);resize:vertical;line-height:1.5}
+.mkitem{border-bottom:1px solid var(--line);padding:8px 0;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.mkitem p{margin:0;font-family:var(--f-en);font-size:16px;white-space:pre-wrap;word-break:break-word}
+.fm{grid-column:1;font-size:13px;color:var(--accent);font-weight:700;font-family:var(--f-en);word-break:break-word}
+.dots{font-size:11px;letter-spacing:1px;color:var(--accent);margin-left:6px}
+.rulecard{background:var(--surface);color:var(--ink);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px;width:min(440px,100%);max-height:85vh;overflow:auto}
+.ri{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:10px 0;border:0;border-bottom:1px solid var(--line);background:none;text-align:left;width:100%;align-items:center}
+.ri b{font-family:var(--f-display);font-weight:400;font-size:15px}.ri .j{grid-column:1;font-size:13px;color:var(--muted)}
+.boxes span.sp{border-color:transparent;width:14px}
 .unit[aria-pressed="true"]{border-color:var(--accent);background:var(--sunk);box-shadow:inset 0 0 0 1px var(--accent)}
 .modes{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .mode{border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:8px 2px;font-weight:700;font-size:14px}
@@ -195,6 +233,8 @@ h2{font-family:var(--f-display);font-weight:400;font-size:20px;margin:0;text-wra
 @media (prefers-reduced-motion: reduce){.flip-in,.bar i{transition:none}.flip.shake .back{animation:none}}
 </style>
 
+</head>
+<body>
 <div class="wrap">
   <header class="top">
     <div class="brand">にゃんたん Oxford<small id="unitSub">Unit 4 · Fantastic journeys</small></div>
@@ -222,21 +262,24 @@ h2{font-family:var(--f-display);font-weight:400;font-size:20px;margin:0;text-wra
         <button class="mode" data-mode="meaning">いみ</button>
         <button class="mode" data-mode="listen">きいて</button>
         <button class="mode" data-mode="spell">スペル</button>
+        <button class="mode" data-mode="gram">文法</button>
       </div>
       <p class="muted" id="modeHelp"></p>
       <button class="primary" id="startBtn">スタート（10もん）</button>
     </div>
 
-    <button class="weakbtn" id="weakStart"><span>にがて とっくん</span><span><span class="n" id="weakN">0</span> こ</span></button>
+    <button class="weakbtn" id="weakStart"><span>とっくん中を れんしゅう</span><span><span class="n" id="weakN">0</span> こ</span></button>
 
     <div class="panel">
       <h2>コインの ルール</h2>
       <ul class="rules">
-        <li>せいかい 1もん：10コイン（スペルは15コイン）</li>
+        <li>いみ・きいて：せいかい 10コイン</li>
+        <li>スペル・へんしん・文法：せいかい 15コイン</li>
         <li>レベル2は 1.5ばい、レベル3は 2ばい</li>
         <li>3もん れんぞく せいかいで +5コイン</li>
+        <li>とっくん中の 単語を こくふく +20、ルールを おぼえた +30</li>
         <li>さいごの ボーナス：ぜんもん せいかい +50、8わり +30、6わり +10</li>
-        <li>50コインで ねこカードを 1まい ひけるよ</li>
+        <li>50コインで ねこカードを 1まい。1日 7回まで ひけるよ</li>
       </ul>
     </div>
   </section>
@@ -284,8 +327,8 @@ h2{font-family:var(--f-display);font-weight:400;font-size:20px;margin:0;text-wra
   <section id="note" class="wrap" style="padding:0" hidden>
     <div class="panel">
       <h2>たんごノート <span class="muted" id="noteUnit"></span></h2>
-      <div class="tabs"><button class="mode" data-tab="weak" aria-pressed="true">にがて</button><button class="mode" data-tab="all">ぜんぶ</button></div>
-      <p class="muted" style="margin:0">英語を タップすると 読みかたが きこえるよ。2回 れんぞくで せいかいすると にがて から はずれるよ。</p>
+      <div class="tabs4"><button class="mode" data-tab="weak">とっくん中</button><button class="mode" data-tab="all">ぜんぶ</button><button class="mode" data-tab="rule">ルール</button><button class="mode" data-tab="make">つくって<br>みよう</button></div>
+      <p class="muted" style="margin:0" id="noteHelp"></p>
       <div class="wlist" id="wlist"></div>
     </div>
     <button class="danger" id="resetBtn">このユニットの きろくを けす</button>
@@ -445,15 +488,6 @@ obviously|オブヴィアスリ|あきらかに・どう見ても|3|She obviousl
 chatterbox|チャターボックス|おしゃべりな 人|3|Dolphins are nature's chatterboxes.
 behaviour|ビヘイヴィア|ふるまい・行動|3|The project studies wild dolphin behaviour.`;
 const parseWords = raw => raw.trim().split('\n').map(l => { const [en,kana,ja,lv,ex] = l.split('|'); return {en,kana,ja,lv:+lv,ex}; });
-const LV_NAME = {1:'かんたん',2:'ふつう',3:'むずかしい'};
-const MULT = {1:1,2:1.5,3:2,w:1.5};
-const COST = 50;
-const MODE_HELP = {
-  mix:'いみ・きいて・スペルが まざって 出るよ',
-  meaning:'英語を見て、日本語の いみを えらぶよ',
-  listen:'音を きいて、正しい 英語を えらぶよ',
-  spell:'日本語を見て、英語の つづりを 書くよ（レベル1は さいしょの 文字が 出るよ）'
-};
 
 const CARDS4 = [
  {id:1,name:'ねぼすけニャン',r:'N',fur:'#F4C27A',bg:'#DDE7FF',eyes:'sleepy',acc:'nightcap',say:'あと5ふん…',c:'#3B5BDB'},
@@ -606,25 +640,182 @@ function cardHTML(c,mini){
   return '<div class="card r-'+c.r+(mini?' mini':'')+'"><div class="ctop"><span class="cno">No.'+pad(c.id)+'</span><span class="crar">'+c.r+'</span></div><div class="cart">'+catSVG(c)+'<div class="stamp" style="--sc:'+c.c+'">'+c.say+'</div></div><div class="cname">'+c.name+'</div>'+eff+'</div>';
 }
 
+// ---------- grammar data ----------
+const KL={er:'くらべる形（もっと 〜）',est:'いちばんの形（いちばん 〜）',s:'he / she が 〜する 形',ing:'〜している 形（-ing）',ed:'〜した 形（むかしの こと）',c:'みじかくした 形'};
+const X=(r,base,k,a,d,w)=>({t:'x',r,base,k,a,d:d.split(','),w});
+const F=(r,ja,s,a,d,w)=>({t:'fit',r,ja,s,a,d,w});
+const P=(r,ja,a,d,w)=>({t:'pick',r,ja,a,d,w});
+const B=(r,src,a,x)=>({t:'build',r,src,a,x});
+const SC=(r,ja,a)=>({t:'scale',r,ja,a});
+const SIM=[['quiet','a mouse'],['big','saucers'],['red','a ripe apple'],['cold','ice'],['cold','snow'],['white','snow'],['white','a cloud'],['soft','a cloud'],['fast','the wind'],['fast','a tiger'],['good','gold'],['tall','a tree'],['busy','a bee'],['hot','fire'],['strong','a tiger'],['slow','a turtle']];
+
+const GRAM={
+u4:{
+ rules:{
+  c4:{n:"みじかくした 形（ ' ）",lv:1,ex:[['she is',"she's"],['can not',"can't"],['let us',"let's"]],tip:"2つの 言葉を くっつけて みじかく するよ。きえた 文字の ところに ' を つけるよ。"},
+  p4:{n:"だれのもの？（ 's ）",lv:2,ex:[['イエティの うで',"the yeti's arm"],['アガサの 手',"Agatha's hand"],['ねこ 2ひき（ふくすう）','two cats']],tip:"持ち主の すぐ あとに 's を つけるよ。ふくすうの s だけ なら ' は つけないよ。"},
+  s4:{n:'たとえ（as 〜 as / like）',lv:2,ex:[['ネズミみたいに しずか','as quiet as a mouse'],['風みたいに 走った','ran like the wind'],['お皿みたいに 大きい 目','eyes as big as saucers']],tip:'「as ○○ as △△」や「like △△」で、「△△ みたい」と たとえるよ。'},
+  q4:{n:'会話の 書き方（“ ”）',lv:2,ex:[['','“Hello!” said the yeti.'],['','“What\'s your name?”'],['','“You\'ll see,” replied the yeti.']],tip:'しゃべった 言葉を “ ” で かこむよ。! ? , は “ ” の 内がわに 入れるよ。'}
+ },
+ items:[
+  X('c4','who is','c',"who's","whos,who'is,wh'os"),X('c4','you are','c',"you're","your,youre,you'are"),
+  X('c4','they will','c',"they'll","theyll,they'ill,the'yll"),X('c4','let us','c',"let's","lets,let'us,le'ts"),
+  X('c4','cannot','c',"can't","cant,ca'nt,can'not"),X('c4','did not','c',"didn't","did'nt,didnt,di'dnt"),
+  X('c4','it is','c',"it's","its,it'is,i'ts"),X('c4','I am','c',"I'm","Im,I'am,Iam'"),
+  X('c4','do not','c',"don't","dont,do'nt,don'not"),X('c4','that is','c',"that's","thats,that'is,tha'ts"),
+  X('c4','we are','c',"we're","were,we'are,wer'e"),X('c4','you will','c',"you'll","youll,you'ill,yo'ull"),
+  P('p4','',"The child's coat was on the seat.",["The childs coat was on the seat.","The child'coat was on the seat."]),
+  P('p4','',"The horses ate the yeti's food.",["The horse's ate the yetis food.","The horses ate the yetis food."]),
+  P('p4','',"She came in her father's car.",["She came in her fathers car.","She came in her father car's."]),
+  P('p4','ウサギの ニンジン',"the rabbit's carrots",["the rabbits carrots","the rabbit carrot's"]),
+  P('p4','ねこの しっぽ',"the cat's tail",["the cats tail","the cat tail's"]),
+  P('p4','エイミーの リンゴ',"Amy's apples",["Amys apples","Amy's apple's"]),
+  P('p4','ねこを 3びき かっている',"I have three cats.",["I have three cat's.","I have three cats'."]),
+  P('p4','イエティたちが ねていた',"The yetis were sleeping.",["The yeti's were sleeping.","The yetis' were sleeping."]),
+  P('p4','イエティの うで',"the yeti's arm",["the yetis arm","the yeti arm's"],'yeti'),
+  F('s4','ネズミみたいに しずか','He was as quiet as a ＿＿.','mouse',['tiger','rocket','drum'],'mouse'),
+  F('s4','サルみたいに のぼった','She climbed like a ＿＿.','monkey',['fish','snake','stone'],'monkey'),
+  F('s4','風みたいに 走った','The children ran like the ＿＿.','wind',['snail','rain','moon']),
+  F('s4','お皿みたいに 大きい 目','Their eyes were as big as ＿＿.','saucers',['ants','peas','mice'],'saucer'),
+  F('s4','金みたいに よい 子','The girl was as good as ＿＿.','gold',['mud','smoke','rain'],'gold'),
+  F('s4','雪みたいに 白い','The peak was as white as ＿＿.','snow',['coal','mud','night']),
+  F('s4','じゅくした リンゴみたいに 赤い','My socks are as red as a ripe ＿＿.','apple',['banana','lemon','cloud']),
+  {t:'sim',r:'s4'},{t:'sim',r:'s4'},
+  P('q4','','“Welcome to my home!” shouted the yeti.',['“Welcome to my home”! shouted the yeti.','Welcome to my home! “shouted the yeti.”']),
+  P('q4','','“I am so very tired,” murmured Agatha.',['“I am so very tired” murmured Agatha.','“I am so very tired”, murmured Agatha.']),
+  P('q4','','“What would you like to do?” asked the yeti.',['“What would you like to do”? asked the yeti.','“What would you like to do.” asked the yeti?']),
+  P('q4','','“Hello, good to meet you!” said Agatha.',['“Hello, good to meet you”! said Agatha.','Hello, “good to meet you!” said Agatha.']),
+  P('q4','','“Have you come to visit me?” asked the yeti.',['“Have you come to visit me”? asked the yeti.','“Have you come to visit me.” asked the yeti?']),
+  P('q4','','“Where are you taking me?” asked Agatha.',['“Where are you taking me”? asked Agatha.','Where are you taking me? “asked Agatha.”'])
+ ],
+ make:['たとえ（as 〜 as / like）を つかって、ふしぎな モンスターを せつめいしよう。','イエティと アガサの 会話を “ ” を つかって 書いてみよう。',"みじかくした 形（can't, I'm など）を 2つ つかって 文を 書こう。"]
+},
+u5:{
+ rules:{
+  e5:{n:'くらべる 形（-er / -est）',lv:1,ex:[['old','older → oldest'],['dark','darker → darkest'],['large','larger → largest']],tip:'「もっと」は -er、「いちばん」は -est。e で おわる 言葉は -r / -st だけ つけるよ。'},
+  v5:{n:'動詞の 形（-s / -ing / -ed）',lv:1,ex:[['jump','jumps · jumping · jumped'],['help','helps · helping · helped'],['click','clicks · clicking · clicked']],tip:'he / she の ときは -s、している ときは -ing、むかしの ことは -ed を つけるよ。'},
+  y5:{n:'y を i に かえる',lv:2,ex:[['busy','busier · busiest'],['noisy','noisier · noisiest'],['fry','fries · fried']],tip:'〈子音 + y〉で おわる 言葉は、y を i に かえてから -er / -est / -es / -ed を つけるよ。-ing の ときは y の まま（frying）。'},
+  d5:{n:'さいごの 文字を かさねる',lv:2,ex:[['big','bigger · biggest'],['hot','hotter · hottest'],['hug','hugging · hugged']],tip:'みじかい 音の 言葉は、さいごの 文字を 2つに してから -er / -est / -ing / -ed を つけるよ。'},
+  ve5:{n:'e を とって -ing',lv:2,ex:[['dance','dancing · danced'],['smile','smiling · smiled'],['rescue','rescuing · rescued']],tip:'e で おわる 動詞は、e を とってから -ing。-ed の ときは d だけ つけるよ。'},
+  es5:{n:'シュー・ブーンの 音は -es',lv:2,ex:[['hiss','hisses'],['buzz','buzzes'],['push','pushes']],tip:'s・z・sh・ch・x で おわる 動詞は、-s ではなく -es を つけるよ。'},
+  i5:{n:'強さを かえる（-ish）',lv:2,ex:[['small（小さい）','smallish（ちょっと 小さい）'],['small（小さい）','tiny（とても 小さい）'],['warm（あたたかい）','warmish（ちょっと あたたかい）']],tip:'-ish を つけると「ちょっと 〜」に なって 弱まるよ。もっと 強く したい ときは 別の 言葉に かえるよ。'},
+  m5:{n:'more / most',lv:3,ex:[['beautiful','more beautiful · most beautiful'],['comfortable','more comfortable · most comfortable'],['big（みじかい 言葉）','bigger · biggest']],tip:'長い 言葉は -er / -est の かわりに、前に more / most を つけるよ。'},
+  sc5:{n:'強さの ものさし',lv:3,ex:[['さむい','freezing → cold → mild'],['あつい','warmish → hot → scorching'],['大きさ','tiny → small → big → huge']],tip:'同じ なかまの 言葉でも 強さが ちがうよ。ものさしに ならべて くらべよう。'},
+  r5:{n:'言ったことを つたえる 文',lv:3,ex:[['“Leo is swimming,” explained Aisha.','Aisha explained that Leo was swimming.'],['“There are whales on the beach,” announced Max.','Max announced that there were whales on the beach.'],['かわる ところ','is → was　are → were']],tip:'だれかが 言ったことを つたえる ときは、is → was、are → were に かえるよ。“ ” は つけないよ。'}
+ },
+ items:[
+  X('y5','busy','est','busiest','busyest,busier,most busy','busy'),X('y5','busy','er','busier','busyer,busyier,more busy','busy'),
+  X('y5','noisy','est','noisiest','noisyest,noiser,most noisy','noisy'),X('y5','noisy','er','noisier','noisyer,noiser,more noisy','noisy'),
+  X('e5','mild','er','milder','mildder,mildier,more mild','mild'),X('e5','mild','est','mildest','mildst,mildiest,most mild','mild'),
+  X('e5','gentle','er','gentler','gentleer,gentlier,more gentler','gentle'),X('e5','gentle','est','gentlest','gentleest,gentlist,most gentlest','gentle'),
+  X('e5','wild','er','wilder','wildder,wildier,more wilder','wild'),
+  F('i5','ものすごく 大きい ケーキ','She had a ＿＿ cake.','huge',['smallish','tiny','warmish'],'huge'),
+  F('i5','こおるほど さむい 朝','It was ＿＿ this morning.','freezing',['warmish','mild','hot'],'freezing'),
+  F('i5','やけるように あつい 夏の 日','It was a ＿＿ summer day.','scorching',['freezing','mild','cold'],'scorching'),
+  X('v5','jump','ed','jumped','jumpt,jumpped,jumpd','jump'),X('v5','jump','ing','jumping','jumpping,jumpeing,jumpin','jump'),
+  X('v5','help','ed','helped','helpt,helpped,helpd','help'),X('v5','help','s','helps','helpes,helpies,helpz','help'),
+  X('v5','click','ed','clicked','clickd,clickked,clicket','click'),X('v5','chirp','ed','chirped','chirpt,chirpped,chirpd','chirp'),
+  X('v5','squeak','ed','squeaked','squeakd,squeakked,squeakt','squeak'),
+  X('ve5','dance','ing','dancing','danceing,dancking,danccing','dance'),X('ve5','dance','ed','danced','danceed,dancd,danct','dance'),
+  X('ve5','smile','ing','smiling','smileing,smilling,smilin','smile'),X('ve5','smile','ed','smiled','smileed,smilled,smild','smile'),
+  X('ve5','rescue','ing','rescuing','rescueing,rescuring,rescuin','rescue'),X('ve5','rescue','ed','rescued','rescueed,rescuied,rescud','rescue'),
+  X('ve5','whistle','ing','whistling','whistleing,whistlling,whistlin','whistle'),
+  X('ve5','communicate','ing','communicating','communicateing,communicatting,communicatin','communicate'),
+  X('d5','hug','ing','hugging','huging,hugeing,huggin','hug'),X('d5','hug','ed','hugged','huged,hugd,hugget','hug'),
+  X('e5','old','er','older','oldder,oldier,more old'),X('e5','old','est','oldest','olddest,oldist,most old'),
+  X('e5','quick','er','quicker','quickker,quickier,more quick'),X('e5','dark','est','darkest','darkkest,darkist,most dark'),
+  X('e5','large','er','larger','largeer,largger,more large'),X('e5','large','est','largest','largeest,largist,most large'),
+  X('e5','cold','er','colder','coldder,coldier,more cold'),X('e5','small','est','smallest','smalest,smallist,most small'),
+  X('v5','walk','ed','walked','walkt,walkked,walkd'),X('v5','look','ing','looking','lookking,lookeing,lookin'),
+  X('v5','listen','ed','listened','listend,listenned,listent'),X('v5','record','ed','recorded','recordd,recordded,recordet'),
+  X('y5','fry','ed','fried','fryed,fryied,frid'),X('y5','fry','s','fries','frys,fryes,frise'),
+  X('y5','sleepy','est','sleepiest','sleepyest,sleepest,most sleepy'),X('y5','lazy','est','laziest','lazyest,lazest,most lazy'),
+  X('y5','happy','er','happier','happyer,happer,more happy'),X('y5','carry','ed','carried','carryed,caried,carryied'),
+  X('d5','big','er','bigger','biger,bigr,more big'),X('d5','big','est','biggest','bigest,biggst,most big'),
+  X('d5','hot','er','hotter','hoter,hotier,more hot'),X('d5','swim','ing','swimming','swiming,swimeing,swimmming'),
+  X('d5','stop','ed','stopped','stoped,stopd,stoppt'),X('d5','run','ing','running','runing,runeing,runnig'),
+  X('ve5','make','ing','making','makeing,makking,makin'),X('ve5','glance','ing','glancing','glanceing,glancking,glancin'),
+  X('ve5','glance','ed','glanced','glanceed,glancd,glanct'),X('ve5','live','ed','lived','liveed,livd,livved'),
+  X('es5','hiss','s','hisses','hisss,hissies,hiss\'s'),X('es5','buzz','s','buzzes','buzzs,buzzies,buzes'),
+  X('es5','push','s','pushes','pushs,pushies,pushis'),X('es5','catch','s','catches','catchs,catchies,cathes'),
+  X('es5','wash','s','washes','washs,washies,washis'),X('es5','fix','s','fixes','fixs,fixies,fixxes'),
+  F('i5','とても 小さい 赤ちゃんザル','The baby monkey was ＿＿.','tiny',['smallish','huge','warmish']),
+  F('i5','ちょっとだけ 小さい ケーキ','She had a ＿＿ cake.','smallish',['tiny','huge','freezing']),
+  F('i5','とても かなしい 男の子','The boy felt ＿＿.','miserable',['happy','smallish','mild']),
+  F('i5','とても こわがっている ネズミ','The mouse was ＿＿.','terrified',['calm','warmish','huge']),
+  F('i5','ちょっと あたたかい 日','It was a ＿＿ day.','warmish',['scorching','freezing','tiny']),
+  F('i5','ちょっと 赤っぽい 花','It was a ＿＿ flower.','reddish',['redish','reds','redder']),
+  F('i5','smallish の いみは？','','ちょっと 小さい',['とても 小さい','とても 大きい','小さくない']),
+  F('i5','warmish の いみは？','','ちょっと あたたかい',['やけるように あつい','こおるほど さむい','あたたかくない']),
+  F('i5','small より 強い（もっと 小さい）言葉は？','','tiny',['smallish','big','mild']),
+  F('i5','-ish を つけると 意味は どうなる？','','ちょっと 弱く なる',['もっと 強く なる','反対の 意味に なる','かわらない']),
+  X('m5','beautiful','er','more beautiful','beautifuller,beautifuler,more beautifuller'),
+  X('m5','beautiful','est','most beautiful','beautifullest,beautifulest,most beautifullest'),
+  X('m5','comfortable','er','more comfortable','comfortabler,comfortableer,more comfortabler'),
+  X('m5','comfortable','est','most comfortable','comfortablest,comfortableest,more comfortable'),
+  X('m5','dangerous','er','more dangerous','dangerouser,dangerousser,most dangerous'),
+  F('m5','big の「もっと」は？','','bigger',['more big','biger','most big']),
+  SC('sc5','さむい じゅんに ならべよう（いちばん さむい → いちばん あつい）',['freezing','cold','mild','warmish','hot','scorching']),
+  SC('sc5','小さい じゅんに ならべよう',['tiny','small','big','huge']),
+  SC('sc5','あつさが 弱い じゅんに ならべよう',['warmish','hot','scorching']),
+  SC('sc5','さむさが 弱い じゅんに ならべよう',['mild','cold','freezing']),
+  B('r5','“The dolphin is swimming,” said Tom.','Tom said that the dolphin was swimming.',['is']),
+  B('r5','“The whales are on the beach,” shouted Juanita.','Juanita shouted that the whales were on the beach.',['are']),
+  B('r5','“Moko is very clever,” said Mike.','Mike said that Moko was very clever.',['is']),
+  B('r5','“There are fish over there,” said the dolphin.','The dolphin said that there were fish over there.',['are']),
+  B('r5','“The panda is one year old,” said the keeper.','The keeper said that the panda was one year old.',['is']),
+  B('r5','“The turtles are swimming,” explained Aisha.','Aisha explained that the turtles were swimming.',['are']),
+  F('r5','“Leo is swimming,” explained Aisha.','Aisha explained that Leo ＿＿ swimming.','was',['is','were','be']),
+  F('r5','“There are whales on the beach,” announced Max.','Max announced that there ＿＿ whales on the beach.','were',['are','was','is']),
+  F('r5','“The sea is cold,” said Mum.','Mum said that the sea ＿＿ cold.','was',['is','were','are'])
+ ],
+ make:['-ish や 強い 言葉を つかって、きょうの 天気を せつめいしよう。','-er / -est を つかって、動物を くらべよう。（れい：A whale is bigger than a dolphin.）','ゆうかんな 動物の ニュースの 見出しと 1文目を 書いてみよう。']
+}};
+for(const k in UNITS){Object.assign(UNITS[k],GRAM[k]);const fm={};UNITS[k].items.forEach((it,i)=>{it.id=k+'-'+i;if(it.w)(fm[it.w]=fm[it.w]||[]).push(it)});UNITS[k].fm=fm}
+
+// ---------- utils ----------
+const $=id=>document.getElementById(id);
+const esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const attr=t=>esc(t).replace(/"/g,'&quot;');
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())};
+const norm=s=>String(s).trim().toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g,' ');
+const isAscii=s=>/^[\x00-\x7F“”’]*$/.test(s);
+const LV_NAME={1:'かんたん',2:'ふつう',3:'むずかしい'};
+const MULT={1:1,2:1.5,3:2,w:1.5};
+const COST=50, DAILY=7;
+const MODE_HELP={
+  mix:'いみ・きいて・スペル・へんしん・文法が まざって 出るよ。単語を おぼえると へんしん問題が ふえるよ',
+  meaning:'英語を見て、日本語の いみを えらぶよ',
+  listen:'音を きいて、正しい 英語を えらぶよ',
+  spell:'日本語を見て、英語の つづりを 書くよ（レベル1は さいしょの 文字が 出るよ）',
+  gram:'へんしん（-er や -ing など）や 文の ルールだけを れんしゅうするよ。いみを 知っている 単語から 出るよ'
+};
+
 // ---------- state ----------
-// G = all units; S = the selected unit's own coins / cards / weak words
 const KEY='nyantan-v2', OLD_KEY='nyantan-unit4-v1';
 let G,S;
-const blank=()=>({coins:0,w:{},cards:{},x2:false,free:0,lv:1,mode:'mix'});
+const blank=()=>({coins:0,w:{},r:{},cards:{},x2:false,free:0,lv:1,mode:'mix',mk:[],mkDay:'',mkp:0});
+const newRec=()=>({st:0,ok:0,miss:0,weak:false,lm:'',od:[],days:[]});
+function migrateW(w){for(const en in w){const r=w[en];if(r.st===undefined){const weak=r.miss>0&&(r.streak||0)<2;w[en]={st:r.ok>0?2:0,ok:r.ok||0,miss:r.miss||0,weak,lm:weak?'2000-01-01':'',od:[],days:[]}}}}
 function load(){
   let d=null;try{d=JSON.parse(localStorage.getItem(KEY))}catch(e){}
   if(!d||!d.units){let o=null;try{o=JSON.parse(localStorage.getItem(OLD_KEY))}catch(e){}d={unit:'u4',units:{}};if(o)d.units.u4=o}
-  G=d;for(const k in UNITS)G.units[k]=Object.assign(blank(),G.units[k]||{});
+  G=d;G.dr=G.dr||{d:'',n:0};
+  for(const k in UNITS){G.units[k]=Object.assign(blank(),G.units[k]||{});migrateW(G.units[k].w)}
   setUnit(UNITS[G.unit]?G.unit:'u4');
 }
 function setUnit(k){G.unit=k;UNIT=UNITS[k];S=G.units[k];WORDS=UNIT.words;CARDS=UNIT.cards}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(G))}catch(e){}}
-const rec=en=>S.w[en]||(S.w[en]={ok:0,miss:0,streak:0});
-const isWeak=en=>{const r=S.w[en];return !!r&&r.miss>0&&r.streak<2};
-const isDone=en=>{const r=S.w[en];return !!r&&r.ok>=2&&!isWeak(en)};
-const $=id=>document.getElementById(id);
-const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const wrec=en=>S.w[en]||(S.w[en]=newRec());
+const rrec=id=>S.r[id]||(S.r[id]=Object.assign(newRec(),{seen:false,m:false}));
+const addDay=(arr,d)=>{if(!arr.includes(d))arr.push(d);if(arr.length>6)arr.shift()};
+const hasForms=en=>!!(UNIT.fm[en]&&UNIT.fm[en].length);
+const isWeak=en=>!!(S.w[en]&&S.w[en].weak);
+const isDone=en=>{const r=S.w[en];return !!r&&r.st>=3&&r.days.length>=2&&!r.weak};
+const ruleWeak=id=>!!(S.r[id]&&S.r[id].weak);
+function applyOk(r,d){r.ok++;addDay(r.days,d);if(r.weak){addDay(r.od,d);if(r.od.length>=2){r.weak=false;r.od=[];return true}}return false}
+function applyMiss(r,d){r.miss++;r.weak=true;r.lm=d;r.od=[]}
 
 // ---------- speech ----------
 let VOICE=null;
@@ -635,6 +826,7 @@ function speak(t){
   try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang=VOICE?VOICE.lang:'en-GB';if(VOICE)u.voice=VOICE;u.rate=.8;speechSynthesis.speak(u)}catch(e){toast('音を 出せませんでした')}
 }
 const SPK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>';
+const sayBtn=(t,label,cls)=>'<button class="saybtn'+(cls?' '+cls:'')+'" data-say="'+attr(t)+'">'+SPK+(label||'きく')+'</button>';
 
 let toastT;
 function toast(m){const t=$('toast');t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,2600)}
@@ -651,6 +843,7 @@ function show(id){
 function updCoins(){$('coinNum').textContent=S.coins;$('unitSub').textContent='Unit '+UNIT.no+' · '+UNIT.title}
 const unitPill=()=>'<span class="pill free">Unit '+UNIT.no+'</span>';
 function statusPills(){let h='';if(S.x2)h+='<span class="pill joker">ジョーカー：つぎの クイズ コイン2ばい</span>';if(S.free)h+='<span class="pill free">ただで ひける ×'+S.free+'</span>';return h}
+const weakCount=()=>WORDS.filter(w=>isWeak(w.en)).length+Object.keys(UNIT.rules).filter(ruleWeak).length;
 
 // ---------- home ----------
 function renderHome(){
@@ -658,135 +851,275 @@ function renderHome(){
     return '<button class="unit" data-unit="'+k+'" aria-pressed="'+(k===G.unit)+'"><span class="no">Unit '+u.no+'</span><span class="t">'+u.title+'</span><span>'+u.jp+'</span><span class="s">コイン '+p.coins+' · カード '+Object.keys(p.cards).length+'/20</span></button>'}).join('');
   $('heroCat').innerHTML=catSVG(CARDS[UNIT.hero]);
   $('heroSay').innerHTML=UNIT.say;
-  $('heroNote').textContent='教科書 Unit '+UNIT.no+' の 単語が '+WORDS.length+'こ 入っているよ';
+  $('heroNote').textContent='教科書 Unit '+UNIT.no+' の 単語 '+WORDS.length+'こ と 文法ルール '+Object.keys(UNIT.rules).length+'つ が 入っているよ';
   $('statusPills').innerHTML=statusPills();
   $('levels').innerHTML=[1,2,3].map(l=>{const ws=WORDS.filter(w=>w.lv===l);const d=ws.filter(w=>isDone(w.en)).length;
     return '<button class="lv" data-lv="'+l+'" aria-pressed="'+(S.lv===l)+'"><b>レベル'+l+'</b><span>'+LV_NAME[l]+'</span><span class="x">×'+MULT[l]+'</span><span class="m">おぼえた '+d+'/'+ws.length+'</span></button>'}).join('');
+  if(!MODE_HELP[S.mode])S.mode='mix';
   document.querySelectorAll('#modes .mode').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===S.mode));
   $('modeHelp').textContent=MODE_HELP[S.mode];
-  $('weakN').textContent=WORDS.filter(w=>isWeak(w.en)).length;
+  $('weakN').textContent=weakCount();
+}
+
+// ---------- question selection ----------
+function tierW(en){const r=S.w[en];if(!r)return 4;if(r.weak)return r.lm<today()?1:2;if(r.st<3)return 3;return isDone(en)?6:5}
+function tierR(id){const r=S.r[id];if(!r)return 3;if(r.weak)return r.lm<today()?1:2;return r.m?5:3}
+function itTier(it){let t=tierR(it.r);if(it.w){const r=S.w[it.w];const tw=r&&r.weak&&r.lt==='form'?(r.lm<today()?1:2):(r&&r.st>=3?5:3);t=Math.min(t,tw)}return t}
+const sortT=(arr,f)=>arr.map(x=>({x,k:f(x)+Math.random()*.9})).sort((a,b)=>a.k-b.k).map(o=>o.x);
+const wq=(w,type)=>({kind:'w',type,w});
+const gq=it=>({kind:'g',it,w:it.w?WORDS.find(x=>x.en===it.w):null});
+function wordType(w,mode){
+  if(mode!=='mix'&&mode!=='weak')return mode;
+  const r=S.w[w.en],st=r?r.st:0,types=['meaning','listen'];if(st>=1)types.push('spell');
+  if(r&&r.weak&&r.lt&&types.includes(r.lt))return r.lt;
+  if(st===0)return Math.random()<.75?'meaning':'listen';
+  if(st===1)return 'spell';
+  return types[Math.floor(Math.random()*types.length)];
+}
+function gramCands(words,level,mode){
+  const minSt=mode==='gram'?1:2,set=new Set(words.map(w=>w.en));
+  const ready=words.filter(w=>(S.w[w.en]&&S.w[w.en].st||0)>=2).length;
+  return UNIT.items.filter(it=>{
+    if(it.w){if(!set.has(it.w))return false;return (S.w[it.w]&&S.w[it.w].st||0)>=minSt}
+    if(UNIT.rules[it.r].lv>level)return false;
+    return mode!=='mix'||ready>=3;
+  });
+}
+function buildList(level,mode){
+  const N=10,words=level==='w'?WORDS.filter(w=>isWeak(w.en)):WORDS.filter(w=>w.lv===level);
+  let list=[];const used=new Set();
+  const gCount=()=>list.filter(q=>q.kind==='g').length;
+  const takeG=(cands,max,per)=>{const cnt={};for(const it of sortT(cands,itTier)){if(gCount()>=max)break;if(it.w&&used.has(it.w))continue;if((cnt[it.r]||0)>=per)continue;cnt[it.r]=(cnt[it.r]||0)+1;if(it.w)used.add(it.w);list.push(gq(it))}};
+  const takeW=(type)=>{for(const w of sortT(words,w=>tierW(w.en))){if(list.length>=N)break;if(used.has(w.en))continue;used.add(w.en);list.push(wq(w,type||wordType(w,mode)))}};
+  let gc=[];
+  if(mode==='gram'){gc=gramCands(words,level,mode);takeG(gc,N,3)}
+  else if(mode==='mix'){gc=gramCands(words,level,mode);takeG(gc,gc.length>=3?(Math.random()<.5?3:4):gc.length,2);takeW()}
+  else if(mode==='weak'){gc=UNIT.items.filter(it=>ruleWeak(it.r));takeG(gc,4,2);takeW()}
+  else takeW(mode);
+  list=shuffle(list);
+  // first time a rule appears: intro card, then 2 more of that rule in a row (max 2 new rules per session)
+  let intros=0;const maxIntro=mode==='mix'?1:2;
+  for(let i=0;i<list.length&&intros<maxIntro;i++){
+    const q=list[i];if(q.kind!=='g')continue;const rr=S.r[q.it.r];if(rr&&rr.seen)continue;if(list.some((p,j)=>j<i&&p.intro&&p.it.r===q.it.r))continue;
+    q.intro=true;intros++;
+    const same=[];for(let j=list.length-1;j>i&&same.length<2;j--)if(list[j].kind==='g'&&list[j].it.r===q.it.r)same.push(list.splice(j,1)[0]);
+    if(same.length<2)for(const it of shuffle(gc.filter(it=>it.r===q.it.r&&it!==q.it&&!list.some(p=>p.it===it)&&!same.some(p=>p.it===it)&&!(it.w&&used.has(it.w))))){if(same.length>=2)break;if(it.w)used.add(it.w);same.push(gq(it))}
+    same.forEach(p=>p.blk=true);list.splice(i+1,0,...same);i+=same.length;
+  }
+  if(mode==='mix'){
+    // keep grammar at 3-4 per session: drop extra grammar (not the intro block), refill with words
+    while(gCount()>4){let j=-1;for(let k=list.length-1;k>=0;k--)if(list[k].kind==='g'&&!list[k].intro&&!list[k].blk){j=k;break}if(j<0)break;const [rm]=list.splice(j,1);if(rm.it.w)used.delete(rm.it.w)}
+    takeW();
+  }
+  while(list.length>N){let j=-1;for(let k=list.length-1;k>=0;k--)if(list[k].kind==='w'){j=k;break}list.splice(j<0?list.length-1:j,1)}
+  return list;
 }
 
 // ---------- quiz ----------
 let Q=null;
-function weight(w){const r=S.w[w.en];if(!r)return 2;if(isWeak(w.en))return 7;return Math.max(1,3-r.streak)}
-function choose(pool,n){return pool.map(w=>({w,k:Math.pow(Math.random(),1/weight(w))})).sort((a,b)=>b.k-a.k).slice(0,n).map(o=>o.w)}
-function pickType(){const r=Math.random();return r<.36?'meaning':r<.68?'listen':'spell'}
 function startQuiz(level,mode){
-  const pool=level==='w'?WORDS.filter(w=>isWeak(w.en)):WORDS.filter(w=>w.lv===level);
-  if(!pool.length){toast('にがてな 単語は ありません。すごい！');return}
-  const n=Math.min(10,pool.length);
-  Q={level,mode,list:choose(pool,n).map(w=>({w,type:mode==='mix'?pickType():mode})),i:0,correct:0,combo:0,earned:0,miss:[]};
+  const list=buildList(level,mode);
+  if(!list.length){toast(mode==='gram'?'まずは ミックスで 単語の いみを おぼえよう':level==='w'?'とっくん中の ものは ないよ。すごい！':'問題が ありません');return}
+  Q={level,mode,list,i:0,correct:0,combo:0,earned:0,kb:0,rb:0,miss:[]};
   show('quiz');renderQ();
 }
-function distract(w,key){
-  let same=WORDS.filter(x=>x.lv===w.lv&&x.en!==w.en&&x.ja!==w.ja);
-  const picks=shuffle(same).slice(0,3).map(x=>x[key]);
-  return shuffle([w[key],...picks]);
-}
+function distract(w,key){const same=WORDS.filter(x=>x.lv===w.lv&&x.en!==w.en&&x.ja!==w.ja);return shuffle([w[key],...shuffle(same).slice(0,3).map(x=>x[key])])}
+const choicesUI=(opts,en,one)=>'<div class="choices'+(one?' one':'')+'">'+opts.map((o,i)=>'<button class="choice'+(en?' en':'')+'" data-ans="'+i+'">'+esc(o)+'</button>').join('')+'</div>';
+const inputUI=()=>'<div class="boxes" id="boxes"></div><input class="spellin" id="spellIn" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-label="こたえ"><div class="row"><button class="secondary" id="hintBtn">ヒント</button><button class="primary" id="checkBtn">こたえあわせ</button></div><div class="muted" id="hintNote">ヒントを 1回 つかうと もらえる コインが 5へるよ</div>';
+const cur=()=>Q.list[Q.i];
 function renderQ(){
-  const q=Q.list[Q.i],w=q.w;Q.answered=false;Q.hint=w.lv===1?1:0;Q.hintUsed=0;
+  const q=cur();Q.answered=false;Q.hint=0;Q.hintUsed=0;
   $('barFill').style.width=(Q.i/Q.list.length*100)+'%';
   $('qNum').textContent=(Q.i+1)+' / '+Q.list.length;
-  $('qLv').textContent='Unit '+UNIT.no+' · '+(Q.level==='w'?'にがて とっくん':'レベル'+Q.level+'（'+LV_NAME[Q.level]+'）');
-  $('qEarn').textContent='このクイズで +'+Q.earned+' コイン';
+  $('qLv').textContent='Unit '+UNIT.no+' · '+(Q.level==='w'?'とっくん中':'レベル'+Q.level+'（'+LV_NAME[Q.level]+'）');
+  $('qEarn').textContent='このクイズで +'+(Q.earned+Q.kb+Q.rb)+' コイン';
   $('qFb').innerHTML='';
-  let h='';
-  if(q.type==='meaning'){
-    q.opts=distract(w,'ja');
-    h='<div class="qlabel">この 単語の いみは？</div><div class="bigword">'+w.en+'</div><button class="saybtn" data-say="'+w.en+'">'+SPK+'きく</button>'+
-      '<div class="choices">'+q.opts.map((o,i)=>'<button class="choice" data-ans="'+i+'">'+esc(o)+'</button>').join('')+'</div>';
-  }else if(q.type==='listen'){
-    q.opts=distract(w,'en');
-    h='<div class="qlabel">きこえた 単語は どれ？</div><button class="saybtn big" data-say="'+w.en+'">'+SPK+'もう一回 きく</button>'+
-      '<div class="choices">'+q.opts.map((o,i)=>'<button class="choice en" data-ans="'+i+'">'+o+'</button>').join('')+'</div>';
-  }else{
+  if(q.intro&&!q.introDone)return renderIntro(q);
+  if(q.kind==='w')renderWordQ(q);else renderGramQ(q);
+}
+function ruleCardHTML(id){const rl=UNIT.rules[id];
+  return '<div class="ihead">'+catSVG(CARDS[UNIT.hero])+'<div><div class="qlabel">ニャン先生の ポイント</div><h2>'+esc(rl.n)+'</h2></div></div><div class="exs">'+rl.ex.map(e=>'<div class="exr">'+(e[0]?'<span>'+esc(e[0])+'</span><span class="arr">→</span>':'')+'<b>'+esc(e[1])+'</b></div>').join('')+'</div>';}
+function renderIntro(q){
+  rrec(q.it.r).seen=true;save();
+  $('qBody').innerHTML='<div class="intro">'+ruleCardHTML(q.it.r)+'<p class="ask">なにか 気づいた？</p><div class="tip" id="tipBox" hidden>'+esc(UNIT.rules[q.it.r].tip)+'</div><button class="secondary" id="tipBtn">ルールを 見る</button><button class="primary" id="introGo" hidden>やってみる！</button></div>';
+}
+function renderWordQ(q){
+  const w=q.w;let h='';
+  if(q.type==='meaning'){q.opts=distract(w,'ja');q.ans=w.ja;
+    h='<div class="qlabel">この 単語の いみは？</div><div class="bigword">'+w.en+'</div>'+sayBtn(w.en)+choicesUI(q.opts,false);
+  }else if(q.type==='listen'){q.opts=distract(w,'en');q.ans=w.en;
+    h='<div class="qlabel">きこえた 単語は どれ？</div>'+sayBtn(w.en,'もう一回 きく','big')+choicesUI(q.opts,true);
+  }else{q.target=w.en;q.input=true;
     const ex=w.ex.replace(new RegExp(w.en,'i'),'＿＿＿');
-    h='<div class="qlabel">英語で 書いてみよう</div><div class="jabig">'+esc(w.ja)+'</div><div class="ex">'+esc(ex)+'</div>'+
-      '<button class="saybtn" data-say="'+w.en+'">'+SPK+'読みかたを きく</button><div class="boxes" id="boxes"></div>'+
-      '<input class="spellin" id="spellIn" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-label="こたえ">'+
-      '<div class="row"><button class="secondary" id="hintBtn">ヒント</button><button class="primary" id="checkBtn">こたえあわせ</button></div>'+
-      '<div class="muted" id="hintNote">ヒントを 1回 つかうと もらえる コインが 5へるよ</div>';
+    h='<div class="qlabel">英語で 書いてみよう</div><div class="jabig">'+esc(w.ja)+'</div><div class="ex">'+esc(ex)+'</div>'+sayBtn(w.en,'読みかたを きく')+inputUI();
   }
   $('qBody').innerHTML=h;
   if(q.type==='listen')speak(w.en);
-  if(q.type==='spell'){const inp=$('spellIn');if(Q.hint)inp.value=w.en.slice(0,Q.hint);drawBoxes();inp.addEventListener('input',drawBoxes);inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();checkSpell()}});setTimeout(()=>{try{inp.focus()}catch(e){}},50)}
+  if(q.type==='spell')setupInput(w.lv===1?1:0);
+}
+function renderGramQ(q){
+  const it=q.it,rl=UNIT.rules[it.r];let h='<div class="rtag">'+esc(rl.n)+'</div>';
+  q.input=false;q.sel=[];
+  if(it.t==='x'){
+    const rr=S.r[it.r];q.target=it.a;
+    h+='<div class="qlabel">'+KL[it.k]+' に へんしん！</div><div class="bigword">'+esc(it.base)+'</div>'+sayBtn(it.base);
+    if(rr&&rr.ok>=2&&!rr.weak){q.input=true;h+=inputUI()}
+    else{q.opts=shuffle([it.a,...it.d.slice(0,3)]);q.ans=it.a;h+=choicesUI(q.opts,true)}
+  }else if(it.t==='fit'){
+    q.opts=shuffle([it.a,...it.d]);q.ans=it.a;
+    h+='<div class="qlabel">'+(it.s?'ぴったりの 言葉は？':'えらんでね')+'</div><div class="jabig sm'+(isAscii(it.ja)?' en':'')+'">'+esc(it.ja)+'</div>'+(it.s?'<div class="ex">'+esc(it.s)+'</div>':'')+choicesUI(q.opts,isAscii(it.a));
+  }else if(it.t==='pick'){
+    q.opts=shuffle([it.a,...it.d]);q.ans=it.a;
+    h+='<div class="qlabel">ただしい ものは どれ？</div>'+(it.ja?'<div class="jabig sm">'+esc(it.ja)+'</div>':'')+choicesUI(q.opts,true,true);
+  }else if(it.t==='build'){
+    q.tiles=shuffle([...it.a.split(' '),...it.x]);
+    h+='<div class="qlabel">“ ” を つかわずに つたえる 文に しよう</div><div class="ex">'+esc(it.src)+'</div><div class="slots" id="slots"></div><div class="tiles" id="tiles"></div><div class="row"><button class="secondary" id="undoBtn">1つ もどす</button><button class="primary" id="checkBtn">こたえあわせ</button></div>';
+  }else if(it.t==='scale'){
+    q.tiles=shuffle([...it.a]);while(q.tiles.join()===it.a.join())shuffle(q.tiles);
+    h+='<div class="qlabel">ものさしに ならべよう</div><div class="jabig sm">'+esc(it.ja)+'</div><div class="slots" id="slots"></div><div class="tiles" id="tiles"></div><div class="row"><button class="secondary" id="undoBtn">1つ もどす</button><button class="primary" id="checkBtn">こたえあわせ</button></div>';
+  }else if(it.t==='sim'){
+    const pairs=shuffle([...SIM]).slice(0,2);
+    const adjs=[...new Set(pairs.map(p=>p[0]))],nouns=[...new Set(pairs.map(p=>p[1]))];
+    for(const p of shuffle([...SIM])){if(adjs.length<4&&!adjs.includes(p[0]))adjs.push(p[0]);if(nouns.length<4&&!nouns.includes(p[1]))nouns.push(p[1])}
+    q.adjs=shuffle(adjs);q.nouns=shuffle(nouns);q.pa=null;q.pn=null;
+    h+='<div class="qlabel">たとえを 作ろう（いみが 通れば せいかい！）</div><div class="simprev" id="simPrev"></div><div class="muted">ようす</div><div class="tiles" id="tA"></div><div class="muted">たとえる もの</div><div class="tiles" id="tN"></div><button class="primary" id="checkBtn">こたえあわせ</button>';
+  }
+  $('qBody').innerHTML=h;
+  if(q.input)setupInput(0);
+  if(it.t==='build'||it.t==='scale')drawTiles();
+  if(it.t==='sim')drawSim();
+}
+function setupInput(hint){
+  const q=cur(),inp=$('spellIn');Q.hint=hint;if(hint)inp.value=q.target.slice(0,hint);drawBoxes();
+  inp.addEventListener('input',drawBoxes);inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();checkCur()}});
+  setTimeout(()=>{try{inp.focus()}catch(e){}},50);
 }
 function drawBoxes(){
-  const w=Q.list[Q.i].w.en,v=($('spellIn').value||'').trim();
-  $('boxes').innerHTML=[...w].map((ch,i)=>{const t=v[i];if(i<Q.hint&&(t===undefined||t.toLowerCase()===ch))return '<span class="h">'+ch+'</span>';return t?'<span class="t">'+esc(t)+'</span>':'<span></span>'}).join('');
+  const w=cur().target,v=($('spellIn').value||'').replace(/^\s+/,'');
+  $('boxes').innerHTML=[...w].map((ch,i)=>{if(ch===' ')return '<span class="sp"></span>';const t=v[i];if(i<Q.hint&&(t===undefined||norm(t)===norm(ch)))return '<span class="h">'+esc(ch)+'</span>';return t&&t!==' '?'<span class="t">'+esc(t)+'</span>':'<span></span>'}).join('');
 }
 function useHint(){
-  if(Q.answered)return;const w=Q.list[Q.i].w.en;
+  if(Q.answered)return;const w=cur().target;
   if(Q.hint>=w.length-1){toast('これいじょう ヒントは 出せないよ');return}
-  Q.hint++;Q.hintUsed++;const inp=$('spellIn');
-  if(!inp.value.toLowerCase().startsWith(w.slice(0,Q.hint)))inp.value=w.slice(0,Q.hint);
+  Q.hint++;if(w[Q.hint-1]===' ')Q.hint++;Q.hintUsed++;const inp=$('spellIn');
+  if(!norm(inp.value).startsWith(norm(w.slice(0,Q.hint))))inp.value=w.slice(0,Q.hint);
   drawBoxes();$('hintNote').textContent='ヒント '+Q.hintUsed+'回（-'+Q.hintUsed*5+'コイン）';
 }
-function checkSpell(){
-  if(Q.answered)return;const v=$('spellIn').value.trim().toLowerCase();
-  if(!v){toast('文字を 書いてから こたえあわせ してね');return}
-  finish(v===Q.list[Q.i].w.en.toLowerCase(),v);
+function drawTiles(){
+  const q=cur(),scale=q.it.t==='scale';
+  $('slots').innerHTML=q.sel.length?q.sel.map((i,n)=>(scale&&n?'<span class="arr">→</span>':'')+'<span>'+esc(q.tiles[i])+'</span>').join(scale?'':' '):'<span class="ph">'+(scale?'したの カードを じゅんばんに タップしてね':'したの カードを タップして 文を 作ってね')+'</span>';
+  $('tiles').innerHTML=q.tiles.map((t,i)=>'<button class="tile" data-tile="'+i+'"'+(q.sel.includes(i)||Q.answered?' disabled':'')+'>'+esc(t)+'</button>').join('');
 }
-function finish(ok,typed){
-  const q=Q.list[Q.i],w=q.w,r=rec(w.en);Q.answered=true;
-  let gain=0,extra='';
-  if(ok){r.ok++;r.streak++;Q.correct++;Q.combo++;
-    const base=q.type==='spell'?Math.max(5,15-5*Q.hintUsed):10;
-    gain=Math.round(base*MULT[Q.level]);
-    if(Q.combo%3===0){gain+=5;extra='<div class="combo">'+Q.combo+'れんぞく せいかい！ +5ボーナス</div>'}
-    Q.earned+=gain;
-  }else{r.miss++;r.streak=0;Q.combo=0;Q.miss.push(w.en)}
-  save();
-  let diff='';
-  if(q.type==='spell'&&!ok){diff='<div class="muted">あなたの こたえ</div><div class="diff">'+[...typed].map((c,i)=>'<span class="'+(c===w.en[i]?'g':'b')+'">'+esc(c)+'</span>').join('')+'</div>'}
-  const hl=esc(w.ex).replace(new RegExp(w.en,'i'),m=>'<mark>'+m+'</mark>');
-  const last=Q.i===Q.list.length-1;
-  $('qFb').innerHTML='<div class="fb '+(ok?'ok':'ng')+'"><div class="fbhead">'+(ok?'せいかい！ +'+gain+'コイン':'ざんねん… にがてに 入れたよ')+'</div>'+extra+diff+
-    '<div class="fbword">'+w.en+'</div><div class="muted">よみかた：'+w.kana+'</div><div><b>'+esc(w.ja)+'</b></div><div class="ex">'+hl+'</div>'+
-    '<button class="saybtn" data-say="'+w.en+'">'+SPK+'もう一回 きく</button><button class="primary" id="nextBtn">'+(last?'けっかを 見る':'つぎへ')+'</button></div>';
-  $('qEarn').textContent='このクイズで +'+Q.earned+' コイン';
-  if(q.type==='spell'){$('spellIn').disabled=true;$('checkBtn').disabled=true;$('hintBtn').disabled=true}
-  speak(w.en);
-  setTimeout(()=>{const n=$('nextBtn');if(n)n.scrollIntoView({behavior:'smooth',block:'nearest'})},60);
+function drawSim(){
+  const q=cur(),A=q.pa==null?'？':q.adjs[q.pa],N=q.pn==null?'？':q.nouns[q.pn];
+  $('simPrev').innerHTML='It was as <u>'+esc(A)+'</u> as <u>'+esc(N)+'</u>.';
+  $('tA').innerHTML=q.adjs.map((t,i)=>'<button class="tile'+(q.pa===i?' on':'')+'" data-sa="'+i+'"'+(Q.answered?' disabled':'')+'>'+esc(t)+'</button>').join('');
+  $('tN').innerHTML=q.nouns.map((t,i)=>'<button class="tile'+(q.pn===i?' on':'')+'" data-sn="'+i+'"'+(Q.answered?' disabled':'')+'>'+esc(t)+'</button>').join('');
+}
+function checkCur(){
+  if(Q.answered)return;const q=cur();
+  if(q.input){const v=$('spellIn').value.trim();if(!v){toast('文字を 書いてから こたえあわせ してね');return}finish(norm(v)===norm(q.target),v);return}
+  const it=q.it;
+  if(it.t==='build'){if(!q.sel.length){toast('カードを えらんでね');return}const s=q.sel.map(i=>q.tiles[i]).join(' ');finish(s===it.a,s)}
+  else if(it.t==='scale'){if(q.sel.length<it.a.length){toast('ぜんぶ ならべてね');return}const s=q.sel.map(i=>q.tiles[i]);finish(s.join('|')===it.a.join('|'),s.join(' → '))}
+  else if(it.t==='sim'){if(q.pa==null||q.pn==null){toast('2つ えらんでね');return}const a=q.adjs[q.pa],n=q.nouns[q.pn];finish(SIM.some(p=>p[0]===a&&p[1]===n),'as '+a+' as '+n)}
 }
 function answerChoice(i){
-  if(Q.answered)return;const q=Q.list[Q.i],key=q.type==='meaning'?'ja':'en',ok=q.opts[i]===q.w[key];
-  document.querySelectorAll('.choice').forEach((b,j)=>{b.disabled=true;if(q.opts[j]===q.w[key])b.classList.add('right');else if(j===i)b.classList.add('wrong')});
+  if(Q.answered)return;const q=cur(),ok=q.opts[i]===q.ans;
+  document.querySelectorAll('.choice').forEach((b,j)=>{b.disabled=true;if(q.opts[j]===q.ans)b.classList.add('right');else if(j===i)b.classList.add('wrong')});
   finish(ok);
+}
+function finish(ok,typed){
+  const q=cur(),d=today();Q.answered=true;
+  const isG=q.kind==='g',type=isG?'form':q.type,wr=q.w?wrec(q.w.en):null,rr=isG?rrec(q.it.r):null,rl=isG?UNIT.rules[q.it.r]:null;
+  let gain=0,extra='';
+  if(ok){
+    Q.correct++;Q.combo++;
+    const base=(!isG&&q.type!=='spell')?10:15;
+    gain=Math.round(Math.max(5,base-(q.input?5*Q.hintUsed:0))*MULT[Q.level]);
+    if(Q.combo%3===0){gain+=5;extra+='<div class="combo">'+Q.combo+'れんぞく せいかい！ +5ボーナス</div>'}
+    Q.earned+=gain;
+    if(wr){
+      if(applyOk(wr,d)){Q.kb+=20;extra+='<div class="combo">「'+q.w.en+'」を こくふく！ +20</div>'}
+      if(type==='meaning')wr.st=Math.max(wr.st,1);
+      if(type==='spell')wr.st=Math.max(wr.st,hasForms(q.w.en)?2:3);
+      if(type==='form')wr.st=Math.max(wr.st,3);
+    }
+    if(rr){
+      if(applyOk(rr,d)){Q.kb+=20;extra+='<div class="combo">ルール「'+esc(rl.n)+'」を こくふく！ +20</div>'}
+      if(!rr.m&&rr.ok>=3&&rr.days.length>=2&&!rr.weak){rr.m=true;Q.rb+=30;extra+='<div class="combo">ルール「'+esc(rl.n)+'」を おぼえた！ +30</div>'}
+    }
+  }else{
+    Q.combo=0;
+    if(wr){applyMiss(wr,d);wr.lt=type}
+    if(rr)applyMiss(rr,d);
+    Q.miss.push(isG?{t:rl.n,rule:q.it.r}:{t:q.w.en,say:q.w.en});
+  }
+  save();
+  let body='',sayT='';
+  if(!isG){
+    const w=q.w;sayT=w.en;
+    if(q.type==='spell'&&!ok)body+='<div class="muted">あなたの こたえ</div><div class="diff">'+[...typed].map((c,i)=>'<span class="'+(c===w.en[i]?'g':'b')+'">'+esc(c)+'</span>').join('')+'</div>';
+    const hl=esc(w.ex).replace(new RegExp(w.en,'i'),m=>'<mark>'+m+'</mark>');
+    body+='<div class="fbword">'+w.en+'</div><div class="muted">よみかた：'+w.kana+'</div><div><b>'+esc(w.ja)+'</b></div><div class="ex">'+hl+'</div>';
+  }else{
+    const it=q.it;
+    if(it.t==='x'){sayT=it.a;
+      if(q.input&&!ok)body+='<div class="muted">あなたの こたえ</div><div class="diff">'+[...typed].map((c,i)=>'<span class="'+(norm(c)===norm(it.a[i]||'')?'g':'b')+'">'+esc(c)+'</span>').join('')+'</div>';
+      body+='<div class="fbword">'+esc(it.base)+' → '+esc(it.a)+'</div><div class="muted">'+KL[it.k]+'</div>';}
+    else if(it.t==='fit'){const full=it.s?it.s.replace('＿＿',it.a):it.a;sayT=isAscii(full)?full:'';body+='<div class="fbword" style="font-size:22px">'+esc(full)+'</div>'}
+    else if(it.t==='pick'){sayT=it.a;body+='<div class="fbword" style="font-size:20px">'+esc(it.a)+'</div>'}
+    else if(it.t==='build'){sayT=it.a;if(!ok)body+='<div class="muted">あなたの こたえ：'+esc(typed)+'</div>';body+='<div class="fbword" style="font-size:20px">'+esc(it.a)+'</div>'}
+    else if(it.t==='scale'){sayT=it.a.join(', ');if(!ok)body+='<div class="muted">あなたの こたえ：'+esc(typed)+'</div>';body+='<div class="fbword" style="font-size:20px">'+esc(it.a.join(' → '))+'</div>'}
+    else if(it.t==='sim'){
+      const ex=SIM.filter(p=>q.adjs.includes(p[0])&&q.nouns.includes(p[1])).map(p=>'as '+p[0]+' as '+p[1]);
+      sayT=ok?'It was '+typed+'.':ex[0];
+      body+=(ok?'<div class="fbword" style="font-size:22px">It was '+esc(typed)+'.</div>':'<div class="muted">「'+esc(typed)+'」は いみが 通らないかも</div>')+'<div class="muted">'+(ok?'ほかにも：':'たとえば：')+esc(ex.filter(e=>e!==typed).join(' / '))+'</div>';
+    }
+    if(!ok)body+='<div class="tip">'+esc(rl.tip)+'</div>';
+  }
+  const last=Q.i===Q.list.length-1;
+  $('qFb').innerHTML='<div class="fb '+(ok?'ok':'ng')+'"><div class="fbhead">'+(ok?'せいかい！ +'+gain+'コイン':'ざんねん… とっくん中に 入れたよ')+'</div>'+extra+body+
+    (sayT?sayBtn(sayT,'もう一回 きく'):'')+'<button class="primary" id="nextBtn">'+(last?'けっかを 見る':'つぎへ')+'</button></div>';
+  $('qEarn').textContent='このクイズで +'+(Q.earned+Q.kb+Q.rb)+' コイン';
+  document.querySelectorAll('#qBody input, #qBody button:not(.saybtn)').forEach(b=>b.disabled=true);
+  if(sayT)speak(sayT);
+  setTimeout(()=>{const n=$('nextBtn');if(n)n.scrollIntoView({behavior:'smooth',block:'nearest'})},60);
 }
 function next(){Q.i++;if(Q.i>=Q.list.length)endQuiz();else{renderQ();window.scrollTo(0,0)}}
 function endQuiz(){
   const n=Q.list.length,rate=Q.correct/n,m=MULT[Q.level];
   let bonus=rate===1?50:rate>=.8?30:rate>=.6?10:0;bonus=Math.round(bonus*m);
-  let total=Q.earned+bonus,x2=false;
+  let total=Q.earned+bonus+Q.kb+Q.rb,x2=false;
   if(S.x2&&total>0){x2=true;total*=2;S.x2=false}
   S.coins+=total;save();
   const mo=UNIT.moods,cat=CARDS[rate===1?mo[0]:rate>=.8?mo[1]:rate>=.6?mo[2]:mo[3]];
-  const msg=rate===1?'ぜんもん せいかい！ As good as gold!':rate>=.8?'すごい！ あと少しで パーフェクト！':rate>=.6?'いいかんじ！ にがてを とっくん しよう':'だいじょうぶ！ にがてを くりかえせば おぼえられるよ';
+  const msg=rate===1?'ぜんもん せいかい！ すごい！':rate>=.8?'すごい！ あと少しで パーフェクト！':rate>=.6?'いいかんじ！ とっくん中を くりかえそう':'だいじょうぶ！ くりかえせば かならず おぼえられるよ';
   $('resBody').innerHTML='<div class="hero"><div>'+catSVG(cat)+'</div><p class="say">'+msg+'</p></div>'+
     '<div class="score">'+Q.correct+'<small> / '+n+' もん</small></div>'+
     '<div class="ledger"><div><span>せいかいの コイン</span><b>+'+Q.earned+'</b></div><div><span>せいかいりつ ボーナス（'+Math.round(rate*100)+'%）</span><b>+'+bonus+'</b></div>'+
+    (Q.kb?'<div><span>こくふく ボーナス</span><b>+'+Q.kb+'</b></div>':'')+(Q.rb?'<div><span>ルール おぼえた ボーナス</span><b>+'+Q.rb+'</b></div>':'')+
     (x2?'<div><span>ジョーカー 2ばい</span><b>×2</b></div>':'')+'<div class="tot"><span>もらった コイン</span><span>+'+total+'</span></div></div>'+
-    (Q.miss.length?'<div class="muted">まちがえた 単語（タップで 読みかた）</div><div class="misslist">'+Q.miss.map(e=>'<button data-say="'+e+'">'+e+'</button>').join('')+'</div>':'');
+    (Q.miss.length?'<div class="muted">まちがえた もの（とっくん中に 入ったよ）</div><div class="misslist">'+Q.miss.map(x=>x.say?'<button data-say="'+attr(x.say)+'">'+esc(x.t)+'</button>':'<button data-rule="'+x.rule+'">'+esc(x.t)+'</button>').join('')+'</div>':'');
   show('result');
 }
 
 // ---------- gacha ----------
-function rollCard(){
-  const r=Math.random()*100,rar=r<5?'JOKER':r<15?'SR':r<40?'R':'N';
-  const set=CARDS.filter(c=>c.r===rar);return set[Math.floor(Math.random()*set.length)];
-}
+function drawsLeft(){const d=today();if(G.dr.d!==d)G.dr={d,n:0};return DAILY-G.dr.n}
+function rollCard(){const r=Math.random()*100,rar=r<5?'JOKER':r<15?'SR':r<40?'R':'N';const set=CARDS.filter(c=>c.r===rar);return set[Math.floor(Math.random()*set.length)]}
 function renderGacha(){
-  $('gachaIntro').textContent='Unit '+UNIT.no+' の カードは ぜんぶで 20まい。おもしろい ねこたちの中に、ジョーカーが 2まい まざっているよ。コインは Unit '+UNIT.no+' の クイズで ためた ぶんを 使うよ。';
-  $('gachaPills').innerHTML=unitPill()+'<span class="pill">あつめた '+Object.keys(S.cards).length+' / 20</span><span class="pill">N 60% · R 25% · SR 10% · JOKER 5%</span>'+statusPills();
-  $('drawBtn').textContent=S.free?'ただで 1まい ひく（のこり '+S.free+'）':'1まい ひく（'+COST+'コイン）';
+  const left=drawsLeft();
+  $('gachaIntro').textContent='Unit '+UNIT.no+' の カードは ぜんぶで 20まい。おもしろい ねこたちの中に、ジョーカーが 2まい まざっているよ。コインは Unit '+UNIT.no+' で ためた ぶんを 使うよ。';
+  $('gachaPills').innerHTML=unitPill()+'<span class="pill">あつめた '+Object.keys(S.cards).length+' / 20</span><span class="pill">きょう あと '+left+'回（1日 '+DAILY+'回まで）</span><span class="pill">N 60% · R 25% · SR 10% · JOKER 5%</span>'+statusPills();
+  $('drawBtn').textContent=left<=0?'きょうは おしまい（あした また ひけるよ）':S.free?'ただで 1まい ひく（のこり '+S.free+'）':'1まい ひく（'+COST+'コイン）';
 }
 let drawing=false;
 function draw(){
   if(drawing)return;
+  if(drawsLeft()<=0){toast('きょうは もう '+DAILY+'回 ひいたよ。また あしたね！');return}
   if(!S.free&&S.coins<COST){toast('コインが たりないよ。クイズで あつめよう！（あと '+(COST-S.coins)+'）');return}
   if(S.free)S.free--;else S.coins-=COST;
+  G.dr.n++;
   const c=rollCard(),isNew=!S.cards[c.id];
   S.cards[c.id]=(S.cards[c.id]||0)+1;
   let msg=isNew?'NEW！ '+c.name+' を ゲット！':'かぶった！ +5コイン';
@@ -807,25 +1140,53 @@ function renderBook(){
   $('bookGrid').innerHTML=CARDS.map(c=>S.cards[c.id]?'<button class="slot" data-card="'+c.id+'" aria-label="'+c.name+'">'+cardHTML(c,true)+'<span class="cnt">×'+S.cards[c.id]+'</span></button>':'<div class="empty">?<small>No.'+pad(c.id)+'</small></div>').join('');
 }
 function openCard(id){const c=CARDS.find(x=>x.id===id);const m=$('modal');m.innerHTML='<div class="inner">'+cardHTML(c)+'<div style="color:#fff;font-weight:700">もっている かず：'+S.cards[id]+'まい</div><button class="secondary" id="closeModal">とじる</button></div>';m.hidden=false}
+function openRule(id){
+  const r=S.r[id],m=$('modal');
+  m.innerHTML='<div class="rulecard">'+ruleCardHTML(id)+'<div class="tip">'+esc(UNIT.rules[id].tip)+'</div><div class="muted">'+ruleStatus(id).t+(r?'　せいかい '+r.ok+'回 · まちがい '+r.miss+'回':'')+'</div><button class="secondary" id="closeModal">とじる</button></div>';
+  m.hidden=false;
+}
 
 // ---------- note ----------
-let tab='weak';
+let tab='weak',mkDraft='';
+const NOTE_HELP={weak:'まちがえた 単語と ルールだよ。ちがう 日に 2回 せいかいすると、とっくん中から はずれるよ。',all:'英語を タップすると 読みかたが きこえるよ。●は すすみぐあい（いみ → スペル → へんしん）。',rule:'ルールを タップすると、ニャン先生の せつめいが 見られるよ。',make:'自由に 英語を 書いてみよう。正解・まちがいは つけないよ。'};
+function wStatus(en){const r=S.w[en];if(!r)return {c:'new',t:'まだ'};if(r.weak)return {c:'weak',t:'とっくん中'};if(isDone(en))return {c:'done',t:'おぼえた'};return r.ok?{c:'new',t:'あと少し'}:{c:'new',t:'まだ'}}
+function ruleStatus(id){const r=S.r[id];if(!r||!r.seen&&!r.ok&&!r.miss)return {c:'new',t:'まだ'};if(r.weak)return {c:'weak',t:'とっくん中'};if(r.m)return {c:'done',t:'おぼえた'};return {c:'new',t:'あと少し'}}
+function item(w){
+  const s=wStatus(w.en),r=S.w[w.en],st=r?r.st:0,mx=hasForms(w.en)?3:2,shown=Math.min(st,mx);
+  const forms=[...new Set((UNIT.fm[w.en]||[]).filter(it=>it.t==='x').map(it=>it.a))];
+  return '<div class="wi"><span><button class="w" data-say="'+attr(w.en)+'">'+w.en+'</button><span class="dots" aria-label="すすみぐあい">'+'●'.repeat(shown)+'○'.repeat(mx-shown)+'</span></span><span class="st '+s.c+'">'+s.t+(s.c==='weak'?' ×'+r.miss:'')+'</span><div class="j">'+w.kana+' ・ '+esc(w.ja)+'</div>'+(forms.length?'<div class="fm">→ '+esc(forms.join(' · '))+'</div>':'')+'</div>';
+}
+function ruleRow(id){const rl=UNIT.rules[id],s=ruleStatus(id);return '<button class="ri" data-rule="'+id+'"><b>'+esc(rl.n)+'</b><span class="st '+s.c+'">'+s.t+'</span><span class="j">レベル'+rl.lv+'</span></button>'}
 function renderNote(){
   $('noteUnit').textContent='Unit '+UNIT.no;
   document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.tab===tab));
+  $('noteHelp').textContent=NOTE_HELP[tab];
   let h='';
   if(tab==='weak'){
     const ws=WORDS.filter(w=>isWeak(w.en)).sort((a,b)=>S.w[b.en].miss-S.w[a.en].miss);
-    h=ws.length?'<button class="weakbtn" id="weakStart2" style="margin:8px 0"><span>この '+ws.length+'こを とっくん する</span><span>▶</span></button>'+ws.map(item).join(''):'<p class="muted">にがてな 単語は まだ ないよ。クイズで まちがえた 単語が ここに 入るよ。</p>';
-  }else{
+    const rs=Object.keys(UNIT.rules).filter(ruleWeak);
+    h=ws.length||rs.length?'<button class="weakbtn" id="weakStart2" style="margin:8px 0"><span>とっくん中を れんしゅう（'+(ws.length+rs.length)+'）</span><span>▶</span></button>'+(rs.length?'<div class="wl-h">ルール</div>'+rs.map(ruleRow).join(''):'')+(ws.length?'<div class="wl-h">単語</div>'+ws.map(item).join(''):''):'<p class="muted">とっくん中の ものは まだ ないよ。クイズで まちがえた ものが ここに 入るよ。</p>';
+  }else if(tab==='all'){
     [1,2,3].forEach(l=>{h+='<div class="wl-h">レベル'+l+'（'+LV_NAME[l]+'）</div>'+WORDS.filter(w=>w.lv===l).map(item).join('')});
+  }else if(tab==='rule'){
+    h=[1,2,3].map(l=>{const ids=Object.keys(UNIT.rules).filter(id=>UNIT.rules[id].lv===l);return ids.length?'<div class="wl-h">レベル'+l+'</div>'+ids.map(ruleRow).join(''):''}).join('');
+  }else{
+    const p=S.mkp||0;
+    h='<div class="chips" style="margin-top:8px">'+UNIT.make.map((t,i)=>'<button class="chip" data-mkp="'+i+'" aria-pressed="'+(i===p)+'">おだい '+(i+1)+'</button>').join('')+'</div>'+
+      '<p style="margin:8px 0;font-weight:700">'+esc(UNIT.make[p])+'</p><textarea id="mkText" class="mktext" rows="4" placeholder="ここに 英語で 書いてね"></textarea>'+
+      '<div class="row" style="margin-top:8px"><button class="secondary" id="mkSay">よみあげる</button><button class="primary" id="mkSave">ほぞんする</button></div>'+
+      '<p class="muted" style="margin:6px 0">ほぞんすると 1日1回 +5コイン（英語 3語 いじょう）。</p>'+
+      (S.mk.length?'<div class="wl-h">ほぞんした 文</div>'+S.mk.map((m,i)=>'<div class="mkitem"><span class="muted">'+m.d+' · おだい '+(m.p+1)+'</span><p>'+esc(m.t)+'</p><button class="saybtn" data-say="'+attr(m.t)+'">'+SPK+'きく</button></div>').join(''):'');
   }
   $('wlist').innerHTML=h;
+  const ta=$('mkText');if(ta){ta.value=mkDraft;ta.addEventListener('input',()=>mkDraft=ta.value)}
 }
-function item(w){
-  const r=S.w[w.en];let st='<span class="st new">まだ</span>';
-  if(isWeak(w.en))st='<span class="st weak">にがて ×'+r.miss+'</span>';else if(isDone(w.en))st='<span class="st done">おぼえた</span>';else if(r)st='<span class="st new">あと少し</span>';
-  return '<div class="wi"><button class="w" data-say="'+w.en+'">'+w.en+'</button>'+st+'<div class="j">'+w.kana+' ・ '+esc(w.ja)+'</div></div>';
+function mkSave(){
+  const t=mkDraft.trim();if(!t){toast('英語を 書いてから ほぞん してね');return}
+  S.mk.unshift({d:today(),p:S.mkp||0,t});S.mk=S.mk.slice(0,30);
+  const n=t.split(/\s+/).filter(x=>/[a-z]/i.test(x)).length;
+  if(n>=3&&S.mkDay!==today()){S.mkDay=today();S.coins+=5;toast('ほぞんしたよ！ +5コイン')}else toast('ほぞんしたよ！');
+  mkDraft='';save();updCoins();renderNote();
 }
 let resetArm=0;
 function resetAll(){
@@ -843,23 +1204,34 @@ document.addEventListener('click',e=>{
   if(t.dataset.lv){S.lv=+t.dataset.lv;save();renderHome();return}
   if(t.dataset.mode){S.mode=t.dataset.mode;save();renderHome();return}
   if(t.dataset.ans!==undefined){answerChoice(+t.dataset.ans);return}
+  if(t.dataset.tile!==undefined){if(Q.answered)return;const q=cur(),i=+t.dataset.tile;if(!q.sel.includes(i)){q.sel.push(i);drawTiles()}return}
+  if(t.dataset.sa!==undefined){if(Q.answered)return;cur().pa=+t.dataset.sa;drawSim();return}
+  if(t.dataset.sn!==undefined){if(Q.answered)return;cur().pn=+t.dataset.sn;drawSim();return}
   if(t.dataset.tab){tab=t.dataset.tab;renderNote();return}
+  if(t.dataset.rule){openRule(t.dataset.rule);return}
+  if(t.dataset.mkp!==undefined){S.mkp=+t.dataset.mkp;save();renderNote();return}
   if(t.dataset.card){openCard(+t.dataset.card);return}
   switch(t.id){
     case 'startBtn':startQuiz(S.lv,S.mode);break;
-    case 'weakStart':case 'weakStart2':startQuiz('w',S.mode);break;
+    case 'weakStart':case 'weakStart2':startQuiz('w','weak');break;
     case 'againBtn':startQuiz(Q.level,Q.mode);break;
     case 'nextBtn':next();break;
     case 'hintBtn':useHint();break;
-    case 'checkBtn':checkSpell();break;
-    case 'quitBtn':if(Q&&Q.earned){S.coins+=Q.earned;save();toast('ここまでの '+Q.earned+'コインを もらったよ')}show('home');break;
+    case 'checkBtn':checkCur();break;
+    case 'undoBtn':if(!Q.answered){cur().sel.pop();drawTiles()}break;
+    case 'tipBtn':$('tipBox').hidden=false;t.hidden=true;$('introGo').hidden=false;break;
+    case 'introGo':cur().introDone=true;renderQ();break;
+    case 'quitBtn':{const g=Q?Q.earned+Q.kb+Q.rb:0;if(g){S.coins+=g;save();toast('ここまでの '+g+'コインを もらったよ')}show('home');break}
     case 'drawBtn':draw();break;
     case 'closeModal':$('modal').hidden=true;break;
     case 'resetBtn':resetAll();break;
+    case 'mkSay':if(mkDraft.trim())speak(mkDraft);else toast('英語を 書いてね');break;
+    case 'mkSave':mkSave();break;
   }
 });
 $('modal').addEventListener('click',e=>{if(e.target.id==='modal')$('modal').hidden=true});
 load();show('home');
 </script>
 
-</body></html>
+</body>
+</html>
